@@ -140,6 +140,7 @@ window.onload = function() {
             $(`.time.offset`).html(`Khớp liên tục`);
         } else if ((time >= "11:30:00")&&(time < "13:00:00")){
             $(`.time.offset`).html(`Nghỉ trưa`);
+            $(`.time.offset`).css('background', 'red');
         } else if ((time >= "13:00:00")&&(time < "14:30:00")){
             $(`.time.offset`).html(`Khớp liên tục`);
         } else if ((time >= "14:30:00")&&(time < "14:45:00")){
