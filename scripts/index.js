@@ -163,8 +163,6 @@ window.onload = function() {
         return index === $.inArray(el, stockArr);
     });
 
-    console.log(stockArr)
-
     $.each(stockArr, function(index, symbol) {
         // var symbol = ( value ).id;
 
