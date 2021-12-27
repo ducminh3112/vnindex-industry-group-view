@@ -164,10 +164,7 @@ window.onload = function() {
     });
 
     $.each(stockArr, function(index, symbol) {
-        // var symbol = ( value ).id;
-
-        // console.log(symbol);
-
+        
         // GET REQUEST: Thong tin giao dich
         var request = new XMLHttpRequest();
         request.open(
