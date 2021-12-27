@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <!-- Disable tap highlight on IE -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Web Application Manifest -->
+        <link rel="manifest" href="manifest.json">
+        <!-- Add to homescreen for Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Markup Kick Start">
+        <!-- <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png"> -->
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Markup Kick Start">
+        <!-- <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png"> -->
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <!-- <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png"> -->
+        <meta name="msapplication-TileColor" content="#ff0000">
+        <!-- Color the status bar on mobile devices -->
+        <meta name="theme-color" content="#ff0000">
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles/index-old.css">
+    </head>
+    <body>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="title col-1">Symbol</th>
+                        <th class="title col-2">Vol</th>
+                        <th class="title col-3">Close</th>
+                        <th class="title col-4">%Close</th>
+                        <th class="title col-5">Signal(L/S)</th>
+                        <th></th>
+                        <th class="title col-1">Symbol</th>
+                        <th class="title col-2">Vol</th>
+                        <th class="title col-3">Close</th>
+                        <th class="title col-4">%Close</th>
+                        <th class="title col-5">Signal(L/S)</th>
+                        <th></th>
+                        <th class="title col-1">Symbol</th>
+                        <th class="title col-2">Vol</th>
+                        <th class="title col-3">Close</th>
+                        <th class="title col-4">%Close</th>
+                        <th class="title col-5">Signal(L/S)</th>
+                        <th></th>
+                        <th class="title col-1">Symbol</th>
+                        <th class="title col-2">Vol</th>
+                        <th class="title col-3">Close</th>
+                        <th class="title col-4">%Close</th>
+                        <th class="title col-5">Signal(L/S)</th>
+                        <th></th>
+                        <th class="title col-1">Symbol</th>
+                        <th class="title col-2">Vol</th>
+                        <th class="title col-3">Close</th>
+                        <th class="title col-4">%Close</th>
+                        <th class="title col-5">Signal(L/S)</th>
+                        <th></th>
+                        <th class="title col-1">Symbol</th>
+                        <th class="title col-2">Vol</th>
+                        <th class="title col-3">Close</th>
+                        <th class="title col-4">%Close</th>
+                        <th class="title col-5">Signal(L/S)</th>
+                        <th></th>
+                        <th class="title col-1">Symbol</th>
+                        <th class="title col-2">Vol</th>
+                        <th class="title col-3">Close</th>
+                        <th class="title col-4">%Close</th>
+                        <th class="title col-5">Signal(L/S)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5" class="group">BANK</td>
+                        <td></td>
+                        <td colspan="5" class="group">BĐS</td>
+                        <td></td>
+                        <td colspan="5" class="group">DẦU KHÍ</td>
+                        <td></td>
+                        <td colspan="5" class="group">XÂY DỰNG & ĐẦU TƯ CÔNG</td>
+                        <td></td>
+                        <td colspan="5" class="group">CẢNG</td>
+                        <td></td>
+                        <td colspan="5" class="group">Q-INDEX</td>
+                        <td></td>
+                        <td colspan="5" class="group">VIETTEL</td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="shb" class="shb symbol col-1">SHB</td> <td class="shb vol col-2"></td> <td class="shb close col-3"></td> <td class="shb pctClose col-4"></td> <td class="shb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="tdh" class="tdh symbol col-1">TDH</td> <td class="tdh vol col-2"></td> <td class="tdh close col-3"></td> <td class="tdh pctClose col-4"></td> <td class="tdh signal col-5"></td> <td></td>
+                        <!-- DẦU KHÍ--> <td id="oil" class="oil symbol col-1">OIL</td> <td class="oil vol col-2"></td> <td class="oil close col-3"></td> <td class="oil pctClose col-4"></td> <td class="oil signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG VÀ ĐẦU TƯ CÔNG --> <td id="ndx" class="ndx symbol col-1">NDX</td> <td class="ndx vol col-2"></td> <td class="ndx close col-3"></td> <td class="ndx pctClose col-4"></td> <td class="ndx signal col-5"></td> <td></td>
+                        <!-- CẢNG --> <td id="sfi" class="sfi symbol col-1">SFI</td> <td class="sfi vol col-2"></td> <td class="sfi close col-3"></td> <td class="sfi pctClose col-4"></td> <td class="sfi signal col-5"></td> <td></td>
+                        <!-- Q-INDEX --> <td id="flc" class="flc symbol col-1">FLC</td> <td class="flc vol col-2"></td> <td class="flc close col-3"></td> <td class="flc pctClose col-4"></td> <td class="flc signal col-5"></td> <td></td>
+                        <!-- VIETEL --> <td id="vtk" class="vtk symbol col-1">VTK</td> <td class="vtk vol col-2"></td> <td class="vtk close col-3"></td> <td class="vtk pctClose col-4"></td> <td class="vtk signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="vcb" class="vcb symbol col-1">VCB</td> <td class="vcb vol col-2"></td> <td class="vcb close col-3"></td> <td class="vcb pctClose col-4"></td> <td class="vcb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="vc3" class="vc3 symbol col-1">VC3</td> <td class="vc3 vol col-2"></td> <td class="vc3 close col-3"></td> <td class="vc3 pctClose col-4"></td> <td class="vc3 signal col-5"></td> <td></td>
+                        <!-- DẦU KHÍ--> <td id="plx" class="plx symbol col-1">PLX</td> <td class="plx vol col-2"></td> <td class="plx close col-3"></td> <td class="plx pctClose col-4"></td> <td class="plx signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="sd6" class="sd6 symbol col-1">SD6</td> <td class="sd6 vol col-2"></td> <td class="sd6 close col-3"></td> <td class="sd6 pctClose col-4"></td> <td class="sd6 signal col-5"></td> <td></td>
+                        <!-- CẢNG--> <td id="stg" class="stg symbol col-1">STG</td> <td class="stg vol col-2"></td> <td class="stg close col-3"></td> <td class="stg pctClose col-4"></td> <td class="stg signal col-5"></td> <td></td>
+                        <!-- Q-INDEX --> <td id="art" class="art symbol col-1">ART</td> <td class="art vol col-2"></td> <td class="art close col-3"></td> <td class="art pctClose col-4"></td> <td class="art signal col-5"></td> <td></td>
+                        <!-- VIETTEL --> <td id="ctr" class="ctr symbol col-1">CTR</td> <td class="ctr vol col-2"></td> <td class="ctr close col-3"></td> <td class="ctr pctClose col-4"></td> <td class="ctr signal col-5"></td> <td></td>
+                        
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="eib" class="eib symbol col-1">EIB</td> <td class="eib vol col-2"></td> <td class="eib close col-3"></td> <td class="eib pctClose col-4"></td> <td class="eib signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="pxi" class="pxi symbol col-1">PXI</td> <td class="pxi vol col-2"></td> <td class="pxi close col-3"></td> <td class="pxi pctClose col-4"></td> <td class="pxi signal col-5"></td> <td></td>
+                        <!-- DẦU KHÍ--> <td id="pvs" class="pvs symbol col-1">PVS</td> <td class="pvs vol col-2"></td> <td class="pvs close col-3"></td> <td class="pvs pctClose col-4"></td> <td class="pvs signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="sdt" class="sdt symbol col-1">SDT</td> <td class="sdt vol col-2"></td> <td class="sdt close col-3"></td> <td class="sdt pctClose col-4"></td> <td class="sdt signal col-5"></td> <td></td>
+                        <!-- CẢNG--> <td id="vsc" class="vsc symbol col-1">VSC</td> <td class="vsc vol col-2"></td> <td class="vsc close col-3"></td> <td class="vsc pctClose col-4"></td> <td class="vsc signal col-5"></td> <td></td>
+                        <!-- Q-INDEX --> <td id="hai" class="hai symbol col-1">HAI</td> <td class="hai vol col-2"></td> <td class="hai close col-3"></td> <td class="hai pctClose col-4"></td> <td class="hai signal col-5"></td> <td></td>
+                        <!-- VIETTEL --> <td id="vgi" class="vgi symbol col-1">VGI</td> <td class="vgi vol col-2"></td> <td class="vgi close col-3"></td> <td class="vgi pctClose col-4"></td> <td class="vgi signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="nvb" class="nvb symbol col-1">NVB</td> <td class="nvb vol col-2"></td> <td class="nvb close col-3"></td> <td class="nvb pctClose col-4"></td> <td class="nvb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="kdh" class="kdh symbol col-1">KDH</td> <td class="kdh vol col-2"></td> <td class="kdh close col-3"></td> <td class="kdh pctClose col-4"></td> <td class="kdh signal col-5"></td> <td></td>
+                        <!-- DẦU KHÍ--> <td id="pvc" class="pvc symbol col-1">PVC</td> <td class="pvc vol col-2"></td> <td class="pvc close col-3"></td> <td class="pvc pctClose col-4"></td> <td class="pvc signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="l18" class="l18 symbol col-1">L18</td> <td class="l18 vol col-2"></td> <td class="l18 close col-3"></td> <td class="l18 pctClose col-4"></td> <td class="l18 signal col-5"></td> <td></td>
+                        <!-- CẢNG--> <td id="tcl" class="tcl symbol col-1">TCL</td> <td class="tcl vol col-2"></td> <td class="tcl close col-3"></td> <td class="tcl pctClose col-4"></td> <td class="tcl signal col-5"></td> <td></td>
+                        <!-- Q-INDEX --> <td id="amd" class="amd symbol col-1">AMD</td> <td class="amd vol col-2"></td> <td class="amd close col-3"></td> <td class="amd pctClose col-4"></td> <td class="amd signal col-5"></td> <td></td>
+                        <!-- VIETTEL --> <td id="vtp" class="vtp symbol col-1">VTP</td> <td class="vtp vol col-2"></td> <td class="vtp close col-3"></td> <td class="vtp pctClose col-4"></td> <td class="vtp signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="vbb" class="vbb symbol col-1">VBB</td> <td class="vbb vol col-2"></td> <td class="vbb close col-3"></td> <td class="vbb pctClose col-4"></td> <td class="vbb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="tip" class="tip symbol col-1">TIP</td> <td class="tip vol col-2"></td> <td class="tip close col-3"></td> <td class="tip pctClose col-4"></td> <td class="tip signal col-5"></td> <td></td>
+                        <!-- DẦU KHÍ--> <td id="pvd" class="pvd symbol col-1">PVD</td> <td class="pvd vol col-2"></td> <td class="pvd close col-3"></td> <td class="pvd pctClose col-4"></td> <td class="pvd signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="dpg" class="dpg symbol col-1">DPG</td> <td class="dpg vol col-2"></td> <td class="dpg close col-3"></td> <td class="dpg pctClose col-4"></td> <td class="dpg signal col-5"></td> <td></td>
+                        <!-- CẢNG--> <td id="sgp" class="sgp symbol col-1">SGP</td> <td class="sgp vol col-2"></td> <td class="sgp close col-3"></td> <td class="sgp pctClose col-4"></td> <td class="sgp signal col-5"></td> <td></td>
+                        <!-- Q-INDEX --> <td id="gab" class="gab symbol col-1">GAB</td> <td class="gab vol col-2"></td> <td class="gab close col-3"></td> <td class="gab pctClose col-4"></td> <td class="gab signal col-5"></td> <td></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="vib" class="vib symbol col-1">VIB</td> <td class="vib vol col-2"></td> <td class="vib close col-3"></td> <td class="vib pctClose col-4"></td> <td class="vib signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="teg" class="teg symbol col-1">TEG</td> <td class="teg vol col-2"></td> <td class="teg close col-3"></td> <td class="teg pctClose col-4"></td> <td class="teg signal col-5"></td> <td></td>
+                        <!-- DẦU KHÍ--> <td id="pvt" class="pvt symbol col-1">PVT</td> <td class="pvt vol col-2"></td> <td class="pvt close col-3"></td> <td class="pvt pctClose col-4"></td> <td class="pvt signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="hti" class="hti symbol col-1">HTI</td> <td class="hti vol col-2"></td> <td class="hti close col-3"></td> <td class="hti pctClose col-4"></td> <td class="hti signal col-5"></td> <td></td>
+                        <!-- CẢNG--> <td id="hah" class="hah symbol col-1">HAH</td> <td class="hah vol col-2"></td> <td class="hah close col-3"></td> <td class="hah pctClose col-4"></td> <td class="hah signal col-5"></td> <td></td>
+                        <!-- Q-INDEX --> <td id="klf" class="klf symbol col-1">KLF</td> <td class="klf vol col-2"></td> <td class="klf close col-3"></td> <td class="klf pctClose col-4"></td> <td class="klf signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">Y TẾ & DƯỢC PHẨM</td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="pgb" class="pgb symbol col-1">PGB</td> <td class="pgb vol col-2"></td> <td class="pgb close col-3"></td> <td class="pgb pctClose col-4"></td> <td class="pgb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="bce" class="bce symbol col-1">BCE</td> <td class="bce vol col-2"></td> <td class="bce close col-3"></td> <td class="bce pctClose col-4"></td> <td class="bce signal col-5"></td> <td></td>
+                        <!-- DẦU KHÍ--> <td id="bsr" class="bsr symbol col-1">BSR</td> <td class="bsr vol col-2"></td> <td class="bsr close col-3"></td> <td class="bsr pctClose col-4"></td> <td class="bsr signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="hvh" class="hvh symbol col-1">HVH</td> <td class="hvh vol col-2"></td> <td class="hvh close col-3"></td> <td class="hvh pctClose col-4"></td> <td class="hvh signal col-5"></td> <td></td>
+                        <!-- CẢNG--> <td id="gmd" class="gmd symbol col-1">GMD</td> <td class="gmd vol col-2"></td> <td class="gmd close col-3"></td> <td class="gmd pctClose col-4"></td> <td class="gmd signal col-5"></td> <td></td>
+                        <!-- Q-INDEX --> <td id="ros" class="ros symbol col-1">ROS</td> <td class="ros vol col-2"></td> <td class="ros close col-3"></td> <td class="ros pctClose col-4"></td> <td class="ros signal col-5"></td> <td></td>
+                        <!-- Y TẾ & DƯỢC PHẨM --> <td id="tnh" class="tnh symbol col-1">TNH</td> <td class="tnh vol col-2"></td> <td class="tnh close col-3"></td> <td class="tnh pctClose col-4"></td> <td class="tnh signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="msb" class="msb symbol col-1">MSB</td> <td class="msb vol col-2"></td> <td class="msb close col-3"></td> <td class="msb pctClose col-4"></td> <td class="msb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="ckg" class="ckg symbol col-1">CKG</td> <td class="ckg vol col-2"></td> <td class="ckg close col-3"></td> <td class="ckg pctClose col-4"></td> <td class="ckg signal col-5"></td> <td></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="sci" class="sci symbol col-1">SCI</td> <td class="sci vol col-2"></td> <td class="sci close col-3"></td> <td class="sci pctClose col-4"></td> <td class="sci signal col-5"></td> <td></td>
+                        <!-- CẢNG--> <td id="dxp" class="dxp symbol col-1">DXP</td> <td class="dxp vol col-2"></td> <td class="dxp close col-3"></td> <td class="dxp pctClose col-4"></td> <td class="dxp signal col-5"></td> <td></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                        <!-- Y TẾ & DƯỢC PHẨM --> <td id="dmc" class="dmc symbol col-1">DMC</td> <td class="dmc vol col-2"></td> <td class="dmc close col-3"></td> <td class="dmc pctClose col-4"></td> <td class="dmc signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="bvb" class="bvb symbol col-1">BVB</td> <td class="bvb vol col-2"></td> <td class="bvb close col-3"></td> <td class="bvb pctClose col-4"></td> <td class="bvb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="d11" class="d11 symbol col-1">D11</td> <td class="d11 vol col-2"></td> <td class="d11 close col-3"></td> <td class="d11 pctClose col-4"></td> <td class="d11 signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">KHÍ TỰ NHIÊN</td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="c47" class="c47 symbol col-1">C47</td> <td class="c47 vol col-2"></td> <td class="c47 close col-3"></td> <td class="c47 pctClose col-4"></td> <td class="c47 signal col-5"></td> <td></td>
+                        <!-- CẢNG--> <td id="tco" class="tco symbol col-1">TCO</td> <td class="tco vol col-2"></td> <td class="tco close col-3"></td> <td class="tco pctClose col-4"></td> <td class="tco signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">THỰC PHẨM - ĐỒ UỐNG</td> <td></td>
+                        <!-- Y TẾ & DƯỢC PHẨM --> <td id="fit" class="fit symbol col-1">FIT</td> <td class="fit vol col-2"></td> <td class="fit close col-3"></td> <td class="fit pctClose col-4"></td> <td class="fit signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="acb" class="acb symbol col-1">ACB</td> <td class="acb vol col-2"></td> <td class="acb close col-3"></td> <td class="acb pctClose col-4"></td> <td class="acb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="drh" class="drh symbol col-1">DRH</td> <td class="drh vol col-2"></td> <td class="drh close col-3"></td> <td class="drh pctClose col-4"></td> <td class="drh signal col-5"></td> <td></td>
+                        <!-- KHÍ TỰ NHIÊN--> <td id="pgs" class="pgs symbol col-1">PGS</td> <td class="pgs vol col-2"></td> <td class="pgs close col-3"></td> <td class="pgs pctClose col-4"></td> <td class="pgs signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="sd9" class="sd9 symbol col-1">SD9</td> <td class="sd9 vol col-2"></td> <td class="sd9 close col-3"></td> <td class="sd9 pctClose col-4"></td> <td class="sd9 signal col-5"></td> <td></td>
+                        <!-- CẢNG--> <td id="mac" class="mac symbol col-1">MAC</td> <td class="mac vol col-2"></td> <td class="mac close col-3"></td> <td class="mac pctClose col-4"></td> <td class="mac signal col-5"></td> <td></td>
+                        <!-- THỰC PHẨM - ĐỒ UỐNG --> <td id="ltg" class="ltg symbol col-1">LTG</td> <td class="ltg vol col-2"></td> <td class="ltg close col-3"></td> <td class="ltg pctClose col-4"></td> <td class="ltg signal col-5"></td> <td></td>
+                        <!-- Y TẾ & DƯỢC PHẨM --> <td id="dcl" class="dcl symbol col-1">DCL</td> <td class="dcl vol col-2"></td> <td class="dcl close col-3"></td> <td class="dcl pctClose col-4"></td> <td class="dcl signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="abb" class="abb symbol col-1">ABB</td> <td class="abb vol col-2"></td> <td class="abb close col-3"></td> <td class="abb pctClose col-4"></td> <td class="abb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="hld" class="hld symbol col-1">HLD</td> <td class="hld vol col-2"></td> <td class="hld close col-3"></td> <td class="hld pctClose col-4"></td> <td class="hld signal col-5"></td> <td></td>
+                        <!-- KHÍ TỰ NHIÊN--> <td id="pvg" class="pvg symbol col-1">PVG</td> <td class="pvg vol col-2"></td> <td class="pvg close col-3"></td> <td class="pvg pctClose col-4"></td> <td class="pvg signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="s99" class="s99 symbol col-1">S99</td> <td class="s99 vol col-2"></td> <td class="s99 close col-3"></td> <td class="s99 pctClose col-4"></td> <td class="s99 signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">VẬN TẢI</td> <td></td>
+                        <!-- THỰC PHẨM - ĐỒ UỐNG --> <td id="msn" class="msn symbol col-1">MSN</td> <td class="msn vol col-2"></td> <td class="msn close col-3"></td> <td class="msn pctClose col-4"></td> <td class="msn signal col-5"></td> <td></td>
+                        <!-- Y TẾ & DƯỢC PHẨM --> <td id="jvc" class="jvc symbol col-1">JVC</td> <td class="jvc vol col-2"></td> <td class="jvc close col-3"></td> <td class="jvc pctClose col-4"></td> <td class="jvc signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="sgb" class="sgb symbol col-1">SGB</td> <td class="sgb vol col-2"></td> <td class="sgb close col-3"></td> <td class="sgb pctClose col-4"></td> <td class="sgb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="api" class="api symbol col-1">API</td> <td class="api vol col-2"></td> <td class="api close col-3"></td> <td class="api pctClose col-4"></td> <td class="api signal col-5"></td> <td></td>
+                        <!-- KHÍ TỰ NHIÊN--> <td id="asp" class="asp symbol col-1">ASP</td> <td class="asp vol col-2"></td> <td class="asp close col-3"></td> <td class="asp pctClose col-4"></td> <td class="asp signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="dc4" class="dc4 symbol col-1">DC4</td> <td class="dc4 vol col-2"></td> <td class="dc4 close col-3"></td> <td class="dc4 pctClose col-4"></td> <td class="dc4 signal col-5"></td> <td></td>
+                        <!-- VẬN TẢI --> <td id="vos" class="vos symbol col-1">VOS</td> <td class="vos vol col-2"></td> <td class="vos close col-3"></td> <td class="vos pctClose col-4"></td> <td class="vos signal col-5"></td> <td></td>
+                        <!-- THỰC PHẨM - ĐỒ UỐNG --> <td id="gtn" class="gtn symbol col-1">GTN</td> <td class="gtn vol col-2"></td> <td class="gtn close col-3"></td> <td class="gtn pctClose col-4"></td> <td class="gtn signal col-5"></td> <td></td>
+                        <!-- Y TẾ & DƯỢC PHẨM --> <td id="ppp" class="ppp symbol col-1">PPP</td> <td class="ppp vol col-2"></td> <td class="ppp close col-3"></td> <td class="ppp pctClose col-4"></td> <td class="ppp signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="ctg" class="ctg symbol col-1">CTG</td> <td class="ctg vol col-2"></td> <td class="ctg close col-3"></td> <td class="ctg pctClose col-4"></td> <td class="ctg signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="d2d" class="d2d symbol col-1">D2D</td> <td class="d2d vol col-2"></td> <td class="d2d close col-3"></td> <td class="d2d pctClose col-4"></td> <td class="d2d signal col-5"></td> <td></td>
+                        <!-- KHÍ TỰ NHIÊN--> <td id="cng" class="cng symbol col-1">CNG</td> <td class="cng vol col-2"></td> <td class="cng close col-3"></td> <td class="cng pctClose col-4"></td> <td class="cng signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="vc9" class="vc9 symbol col-1">VC9</td> <td class="vc9 vol col-2"></td> <td class="vc9 close col-3"></td> <td class="vc9 pctClose col-4"></td> <td class="vc9 signal col-5"></td> <td></td>
+                        <!-- VẬN TẢI --> <td id="vna" class="vna symbol col-1">VNA</td> <td class="vna vol col-2"></td> <td class="vna close col-3"></td> <td class="vna pctClose col-4"></td> <td class="vna signal col-5"></td> <td></td>
+                        <!-- THỰC PHẨM - ĐỒ UỐNG --> <td id="vhe" class="vhe symbol col-1">VHE</td> <td class="vhe vol col-2"></td> <td class="vhe close col-3"></td> <td class="vhe pctClose col-4"></td> <td class="vhe signal col-5"></td> <td></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="vab" class="vab symbol col-1">VAB</td> <td class="vab vol col-2"></td> <td class="vab close col-3"></td> <td class="vab pctClose col-4"></td> <td class="vab signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="sgr" class="sgr symbol col-1">SGR</td> <td class="sgr vol col-2"></td> <td class="sgr close col-3"></td> <td class="sgr pctClose col-4"></td> <td class="sgr signal col-5"></td> <td></td>
+                        <!-- KHÍ TỰ NHIÊN--> <td id="pcg" class="pcg symbol col-1">PCG</td> <td class="pcg vol col-2"></td> <td class="pcg close col-3"></td> <td class="pcg pctClose col-4"></td> <td class="pcg signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="cii" class="cii symbol col-1">CII</td> <td class="cii vol col-2"></td> <td class="cii close col-3"></td> <td class="cii pctClose col-4"></td> <td class="cii signal col-5"></td> <td></td>
+                        <!-- VẬN TẢI --> <td id="gsp" class="gsp symbol col-1">GSP</td> <td class="gsp vol col-2"></td> <td class="gsp close col-3"></td> <td class="gsp pctClose col-4"></td> <td class="gsp signal col-5"></td> <td></td>
+                        <!-- THỰC PHẨM - ĐỒ UỐNG --> <td id="pan" class="pan symbol col-1">PAN</td> <td class="pan vol col-2"></td> <td class="pan close col-3"></td> <td class="pan pctClose col-4"></td> <td class="pan signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">CÔNG NGHỆ THÔNG TIN</td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="tpb" class="tpb symbol col-1">TPB</td> <td class="tpb vol col-2"></td> <td class="tpb close col-3"></td> <td class="tpb pctClose col-4"></td> <td class="tpb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="nbb" class="nbb symbol col-1">NBB</td> <td class="nbb vol col-2"></td> <td class="nbb close col-3"></td> <td class="nbb pctClose col-4"></td> <td class="nbb signal col-5"></td> <td></td>
+                        <!-- KHÍ TỰ NHIÊN--> <td id="gas" class="gas symbol col-1">GAS</td> <td class="gas vol col-2"></td> <td class="gas close col-3"></td> <td class="gas pctClose col-4"></td> <td class="gas signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="sd5" class="sd5 symbol col-1">SD5</td> <td class="sd5 vol col-2"></td> <td class="sd5 close col-3"></td> <td class="sd5 pctClose col-4"></td> <td class="sd5 signal col-5"></td> <td></td>
+                        <!-- VẬN TẢI --> <td id="skg" class="skg symbol col-1">SKG</td> <td class="skg vol col-2"></td> <td class="skg close col-3"></td> <td class="skg pctClose col-4"></td> <td class="skg signal col-5"></td> <td></td>
+                        <!-- THỰC PHẨM - ĐỒ UỐNG --> <td id="dbc" class="dbc symbol col-1">DBC</td> <td class="dbc vol col-2"></td> <td class="dbc close col-3"></td> <td class="dbc pctClose col-4"></td> <td class="dbc signal col-5"></td> <td></td>
+                        <!-- CÔNG NGHỆ THÔNG TIN --> <td id="ict" class="ict symbol col-1">ICT</td> <td class="ict vol col-2"></td> <td class="ict close col-3"></td> <td class="ict pctClose col-4"></td> <td class="ict signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="stb" class="stb symbol col-1">STB</td> <td class="stb vol col-2"></td> <td class="stb close col-3"></td> <td class="stb pctClose col-4"></td> <td class="stb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="agg" class="agg symbol col-1">AGG</td> <td class="agg vol col-2"></td> <td class="agg close col-3"></td> <td class="agg pctClose col-4"></td> <td class="agg signal col-5"></td> <td></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="vne" class="vne symbol col-1">VNE</td> <td class="vne vol col-2"></td> <td class="vne close col-3"></td> <td class="vne pctClose col-4"></td> <td class="vne signal col-5"></td> <td></td>
+                        <!-- VẬN TẢI --> <td id="pvt" class="pvt symbol col-1">PVT</td> <td class="pvt vol col-2"></td> <td class="pvt close col-3"></td> <td class="pvt pctClose col-4"></td> <td class="pvt signal col-5"></td> <td></td>
+                        <!-- THỰC PHẨM - ĐỒ UỐNG --> <td id="sab" class="sab symbol col-1">SAB</td> <td class="sab vol col-2"></td> <td class="sab close col-3"></td> <td class="sab pctClose col-4"></td> <td class="sab signal col-5"></td> <td></td>
+                        <!-- CÔNG NGHỆ THÔNG TIN --> <td id="elc" class="elc symbol col-1">ELC</td> <td class="elc vol col-2"></td> <td class="elc close col-3"></td> <td class="elc pctClose col-4"></td> <td class="elc signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="lpb" class="lpb symbol col-1">LPB</td> <td class="lpb vol col-2"></td> <td class="lpb close col-3"></td> <td class="lpb pctClose col-4"></td> <td class="lpb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="lgl" class="lgl symbol col-1">LGL</td> <td class="lgl vol col-2"></td> <td class="lgl close col-3"></td> <td class="lgl pctClose col-4"></td> <td class="lgl signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">PHÂN ĐẠM</td><td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="cti" class="cti symbol col-1">CTI</td> <td class="cti vol col-2"></td> <td class="cti close col-3"></td> <td class="cti pctClose col-4"></td> <td class="cti signal col-5"></td> <td></td>
+                        <!-- VẬN TẢI --> <td id="dl1" class="dl1 symbol col-1">DL1</td> <td class="dl1 vol col-2"></td> <td class="dl1 close col-3"></td> <td class="dl1 pctClose col-4"></td> <td class="dl1 signal col-5"></td> <td></td>
+                        <!-- THỰC PHẨM - ĐỒ UỐNG --> <td id="tar" class="tar symbol col-1">TAR</td> <td class="tar vol col-2"></td> <td class="tar close col-3"></td> <td class="tar pctClose col-4"></td> <td class="tar signal col-5"></td> <td></td>
+                        <!-- CÔNG NGHỆ THÔNG TIN --> <td id="dst" class="dst symbol col-1">DST</td> <td class="dst vol col-2"></td> <td class="dst close col-3"></td> <td class="dst pctClose col-4"></td> <td class="dst signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="ocb" class="ocb symbol col-1">OCB</td> <td class="ocb vol col-2"></td> <td class="ocb close col-3"></td> <td class="ocb pctClose col-4"></td> <td class="ocb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="ndn" class="ndn symbol col-1">NDN</td> <td class="ndn vol col-2"></td> <td class="ndn close col-3"></td> <td class="ndn pctClose col-4"></td> <td class="ndn signal col-5"></td> <td></td>
+                        <!-- PHÂN ĐẠM--> <td id="bfc" class="bfc symbol col-1">BFC</td> <td class="bfc vol col-2"></td> <td class="bfc close col-3"></td> <td class="bfc pctClose col-4"></td> <td class="bfc signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="hbc" class="hbc symbol col-1">HBC</td> <td class="hbc vol col-2"></td> <td class="hbc close col-3"></td> <td class="hbc pctClose col-4"></td> <td class="hbc signal col-5"></td> <td></td>
+                        <!-- VẬN TẢI --> <td id="mhc" class="mhc symbol col-1">MHC</td> <td class="mhc vol col-2"></td> <td class="mhc close col-3"></td> <td class="mhc pctClose col-4"></td> <td class="mhc signal col-5"></td> <td></td>
+                        <!-- THỰC PHẨM - ĐỒ UỐNG --> <td id="vnm" class="vnm symbol col-1">VNM</td> <td class="vnm vol col-2"></td> <td class="vnm close col-3"></td> <td class="vnm pctClose col-4"></td> <td class="vnm signal col-5"></td> <td></td>
+                        <!-- CÔNG NGHỆ THÔNG TIN --> <td id="yeg" class="yeg symbol col-1">YEG</td> <td class="yeg vol col-2"></td> <td class="yeg close col-3"></td> <td class="yeg pctClose col-4"></td> <td class="yeg signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="tcb" class="tcb symbol col-1">TCB</td> <td class="tcb vol col-2"></td> <td class="tcb close col-3"></td> <td class="tcb pctClose col-4"></td> <td class="tcb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="ceo" class="ceo symbol col-1">CEO</td> <td class="ceo vol col-2"></td> <td class="ceo close col-3"></td> <td class="ceo pctClose col-4"></td> <td class="ceo signal col-5"></td> <td></td>
+                        <!-- PHÂN ĐẠM--> <td id="las" class="las symbol col-1">LAS</td> <td class="las vol col-2"></td> <td class="las close col-3"></td> <td class="las pctClose col-4"></td> <td class="las signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="idj" class="idj symbol col-1">IDJ</td> <td class="idj vol col-2"></td> <td class="idj close col-3"></td> <td class="idj pctClose col-4"></td> <td class="idj signal col-5"></td> <td></td>
+                        <!-- VẬN TẢI --> <td id="vip" class="vip symbol col-1">VIP</td> <td class="vip vol col-2"></td> <td class="vip close col-3"></td> <td class="vip pctClose col-4"></td> <td class="vip signal col-5"></td> <td></td>
+                        <!-- THỰC PHẨM - ĐỒ UỐNG --> <td id="naf" class="naf symbol col-1">NAF</td> <td class="naf vol col-2"></td> <td class="naf close col-3"></td> <td class="naf pctClose col-4"></td> <td class="naf signal col-5"></td> <td></td>
+                        <!-- CÔNG NGHỆ THÔNG TIN --> <td id="itd" class="itd symbol col-1">ITD</td> <td class="itd vol col-2"></td> <td class="itd close col-3"></td> <td class="itd pctClose col-4"></td> <td class="itd signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="hdb" class="hdb symbol col-1">HDB</td> <td class="hdb vol col-2"></td> <td class="hdb close col-3"></td> <td class="hdb pctClose col-4"></td> <td class="hdb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="har" class="har symbol col-1">HAR</td> <td class="har vol col-2"></td> <td class="har close col-3"></td> <td class="har pctClose col-4"></td> <td class="har signal col-5"></td> <td></td>
+                        <!-- PHÂN ĐẠM--> <td id="dpm" class="dpm symbol col-1">DPM</td> <td class="dpm vol col-2"></td> <td class="dpm close col-3"></td> <td class="dpm pctClose col-4"></td> <td class="dpm signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="phc" class="phc symbol col-1">PHC</td> <td class="phc vol col-2"></td> <td class="phc close col-3"></td> <td class="phc pctClose col-4"></td> <td class="phc signal col-5"></td> <td></td>
+                        <!-- VẬN TẢI --> <td id="vto" class="vto symbol col-1">VTO</td> <td class="vto vol col-2"></td> <td class="vto close col-3"></td> <td class="vto pctClose col-4"></td> <td class="vto signal col-5"></td> <td></td>
+                        <!-- THỰC PHẨM - ĐỒ UỐNG --> <td id="bna" class="bna symbol col-1">BNA</td> <td class="bna vol col-2"></td> <td class="bna close col-3"></td> <td class="bna pctClose col-4"></td> <td class="bna signal col-5"></td> <td></td>
+                        <!-- CÔNG NGHỆ THÔNG TIN --> <td id="fpt" class="fpt symbol col-1">FPT</td> <td class="fpt vol col-2"></td> <td class="fpt close col-3"></td> <td class="fpt pctClose col-4"></td> <td class="fpt signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="mbb" class="mbb symbol col-1">MBB</td> <td class="mbb vol col-2"></td> <td class="mbb close col-3"></td> <td class="mbb pctClose col-4"></td> <td class="mbb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="itc" class="itc symbol col-1">ITC</td> <td class="itc vol col-2"></td> <td class="itc close col-3"></td> <td class="itc pctClose col-4"></td> <td class="itc signal col-5"></td> <td></td>
+                        <!-- PHÂN ĐẠM--> <td id="dcm" class="dcm symbol col-1">DCM</td> <td class="dcm vol col-2"></td> <td class="dcm close col-3"></td> <td class="dcm pctClose col-4"></td> <td class="dcm signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="tcd" class="tcd symbol col-1">TCD</td> <td class="tcd vol col-2"></td> <td class="tcd close col-3"></td> <td class="tcd pctClose col-4"></td> <td class="tcd signal col-5"></td> <td></td>
+                        <!-- VẬN TẢI --> <td id="hhg" class="hhg symbol col-1">HHG</td> <td class="hhg vol col-2"></td> <td class="hhg close col-3"></td> <td class="hhg pctClose col-4"></td> <td class="hhg signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">TRỒNG TRỌT & CHĂN NUÔI</td> <td></td>
+                        <!-- CÔNG NGHỆ THÔNG TIN --> <td id="cmg" class="cmg symbol col-1">CMG</td> <td class="cmg vol col-2"></td> <td class="cmg close col-3"></td> <td class="cmg pctClose col-4"></td> <td class="cmg signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="klb" class="klb symbol col-1">KLB</td> <td class="klb vol col-2"></td> <td class="klb close col-3"></td> <td class="klb pctClose col-4"></td> <td class="klb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="vc7" class="vc7 symbol col-1">VC7</td> <td class="vc7 vol col-2"></td> <td class="vc7 close col-3"></td> <td class="vc7 pctClose col-4"></td> <td class="vc7 signal col-5"></td> <td></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="pc1" class="pc1 symbol col-1">PC1</td> <td class="pc1 vol col-2"></td> <td class="pc1 close col-3"></td> <td class="pc1 pctClose col-4"></td> <td class="pc1 signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">HÀNG KHÔNG</td><td></td>
+                        <!-- TRỒNG TRỌT & CHĂN NUÔI --> <td id="sjf" class="sjf symbol col-1">SJF</td> <td class="sjf vol col-2"></td> <td class="sjf close col-3"></td> <td class="sjf pctClose col-4"></td> <td class="sjf signal col-5"></td> <td></td>
+                        <!-- CÔNG NGHỆ THÔNG TIN --> <td id="ibc" class="ibc symbol col-1">IBC</td> <td class="ibc vol col-2"></td> <td class="ibc close col-3"></td> <td class="ibc pctClose col-4"></td> <td class="ibc signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="evf" class="evf symbol col-1">EVF</td> <td class="evf vol col-2"></td> <td class="evf close col-3"></td> <td class="evf pctClose col-4"></td> <td class="evf signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="hdc" class="hdc symbol col-1">HDC</td> <td class="hdc vol col-2"></td> <td class="hdc close col-3"></td> <td class="hdc pctClose col-4"></td> <td class="hdc signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">HOÁ CHẤT</td><td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="ctd" class="ctd symbol col-1">CTD</td> <td class="ctd vol col-2"></td> <td class="ctd close col-3"></td> <td class="ctd pctClose col-4"></td> <td class="ctd signal col-5"></td> <td></td>
+                        <!-- HÀNG KHÔNG --> <td id="ast" class="ast symbol col-1">AST</td> <td class="ast vol col-2"></td> <td class="ast close col-3"></td> <td class="ast pctClose col-4"></td> <td class="ast signal col-5"></td> <td></td>
+                        <!-- TRỒNG TRỌT & CHĂN NUÔI --> <td id="psw" class="psw symbol col-1">PSW</td> <td class="psw vol col-2"></td> <td class="psw close col-3"></td> <td class="psw pctClose col-4"></td> <td class="psw signal col-5"></td> <td></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="bab" class="bab symbol col-1">BAB</td> <td class="bab vol col-2"></td> <td class="bab close col-3"></td> <td class="bab pctClose col-4"></td> <td class="bab signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="hqc" class="hqc symbol col-1">HQC</td> <td class="hqc vol col-2"></td> <td class="hqc close col-3"></td> <td class="hqc pctClose col-4"></td> <td class="hqc signal col-5"></td> <td></td>
+                        <!-- HOÁ CHẤT--> <td id="csv" class="csv symbol col-1">CSV</td> <td class="csv vol col-2"></td> <td class="csv close col-3"></td> <td class="csv pctClose col-4"></td> <td class="csv signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="thd" class="thd symbol col-1">THD</td> <td class="thd vol col-2"></td> <td class="thd close col-3"></td> <td class="thd pctClose col-4"></td> <td class="thd signal col-5"></td> <td></td>
+                        <!-- HÀNG KHÔNG --> <td id="acv" class="acv symbol col-1">ACV</td> <td class="acv vol col-2"></td> <td class="acv close col-3"></td> <td class="acv pctClose col-4"></td> <td class="acv signal col-5"></td> <td></td>
+                        <!-- TRỒNG TRỌT & CHĂN NUÔI --> <td id="hsl" class="hsl symbol col-1">HSL</td> <td class="hsl vol col-2"></td> <td class="hsl close col-3"></td> <td class="hsl pctClose col-4"></td> <td class="hsl signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">THIẾT BỊ ĐIỆN</td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="vpb" class="vpb symbol col-1">VPB</td> <td class="vpb vol col-2"></td> <td class="vpb close col-3"></td> <td class="vpb pctClose col-4"></td> <td class="vpb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="pvl" class="pvl symbol col-1">PVL</td> <td class="pvl vol col-2"></td> <td class="pvl close col-3"></td> <td class="pvl pctClose col-4"></td> <td class="pvl signal col-5"></td> <td></td>
+                        <!-- HOÁ CHẤT--> <td id="ddv" class="ddv symbol col-1">DDV</td> <td class="ddv vol col-2"></td> <td class="ddv close col-3"></td> <td class="ddv pctClose col-4"></td> <td class="ddv signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="lcg" class="lcg symbol col-1">LCG</td> <td class="lcg vol col-2"></td> <td class="lcg close col-3"></td> <td class="lcg pctClose col-4"></td> <td class="lcg signal col-5"></td> <td></td>
+                        <!-- HÀNG KHÔNG --> <td id="vjc" class="vjc symbol col-1">VJC</td> <td class="vjc vol col-2"></td> <td class="vjc close col-3"></td> <td class="vjc pctClose col-4"></td> <td class="vjc signal col-5"></td> <td></td>
+                        <!-- TRỒNG TRỌT & CHĂN NUÔI --> <td id="hng" class="hng symbol col-1">HNG</td> <td class="hng vol col-2"></td> <td class="hng close col-3"></td> <td class="hng pctClose col-4"></td> <td class="hng signal col-5"></td> <td></td>
+                        <!-- THIẾT BỊ ĐIỆN --> <td id="mbg" class="mbg symbol col-1">MBG</td> <td class="mbg vol col-2"></td> <td class="mbg close col-3"></td> <td class="mbg pctClose col-4"></td> <td class="mbg signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="bid" class="bid symbol col-1">BID</td> <td class="bid vol col-2"></td> <td class="bid close col-3"></td> <td class="bid pctClose col-4"></td> <td class="bid signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="vph" class="vph symbol col-1">VPH</td> <td class="vph vol col-2"></td> <td class="vph close col-3"></td> <td class="vph pctClose col-4"></td> <td class="vph signal col-5"></td> <td></td>
+                        <!-- HOÁ CHẤT--> <td id="dgc" class="dgc symbol col-1">DGC</td> <td class="dgc vol col-2"></td> <td class="dgc close col-3"></td> <td class="dgc pctClose col-4"></td> <td class="dgc signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="ree" class="ree symbol col-1">REE</td> <td class="ree vol col-2"></td> <td class="ree close col-3"></td> <td class="ree pctClose col-4"></td> <td class="ree signal col-5"></td> <td></td>
+                        <!-- HÀNG KHÔNG --> <td id="hvn" class="hvn symbol col-1">HVN</td> <td class="hvn vol col-2"></td> <td class="hvn close col-3"></td> <td class="hvn pctClose col-4"></td> <td class="hvn signal col-5"></td> <td></td>
+                        <!-- TRỒNG TRỌT & CHĂN NUÔI --> <td id="asm" class="asm symbol col-1">ASM</td> <td class="asm vol col-2"></td> <td class="asm close col-3"></td> <td class="asm pctClose col-4"></td> <td class="asm signal col-5"></td> <td></td>
+                        <!-- THIẾT BỊ ĐIỆN --> <td id="sam" class="sam symbol col-1">SAM</td> <td class="sam vol col-2"></td> <td class="sam close col-3"></td> <td class="sam pctClose col-4"></td> <td class="sam signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- BANK --> <td id="ssb" class="ssb symbol col-1">SSB</td> <td class="ssb vol col-2"></td> <td class="ssb close col-3"></td> <td class="ssb pctClose col-4"></td> <td class="ssb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="pv2" class="pv2 symbol col-1">PV2</td> <td class="pv2 vol col-2"></td> <td class="pv2 close col-3"></td> <td class="pv2 pctClose col-4"></td> <td class="pv2 signal col-5"></td> <td></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="scg" class="scg symbol col-1">SCG</td> <td class="scg vol col-2"></td> <td class="scg close col-3"></td> <td class="scg pctClose col-4"></td> <td class="scg signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">KHÁCH SẠN & DU LỊCH</td><td></td>
+                        <!-- TRỒNG TRỌT & CHĂN NUÔI --> <td id="hag" class="hag symbol col-1">HAG</td> <td class="hag vol col-2"></td> <td class="hag close col-3"></td> <td class="hag pctClose col-4"></td> <td class="hag signal col-5"></td> <td></td>
+                        <!-- THIẾT BỊ ĐIỆN --> <td id="dqc" class="dqc symbol col-1">DQC</td> <td class="dqc vol col-2"></td> <td class="dqc close col-3"></td> <td class="dqc pctClose col-4"></td> <td class="dqc signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                        <!-- BĐS--> <td id="nha" class="nha symbol col-1">NHA</td> <td class="nha vol col-2"></td> <td class="nha close col-3"></td> <td class="nha pctClose col-4"></td> <td class="nha signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">CAO SU</td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="pxs" class="pxs symbol col-1">PXS</td> <td class="pxs vol col-2"></td> <td class="pxs close col-3"></td> <td class="pxs pctClose col-4"></td> <td class="pxs signal col-5"></td> <td></td>
+                        <!-- KHÁCH SẠN & DU LỊCH --> <td id="vng" class="vng symbol col-1">VNG</td> <td class="vng vol col-2"></td> <td class="vng close col-3"></td> <td class="vng pctClose col-4"></td> <td class="vng signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">THUỶ SẢN</td> <td></td>
+                        <!-- THIẾT BỊ ĐIỆN --> <td id="dlg" class="dlg symbol col-1">DLG</td> <td class="dlg vol col-2"></td> <td class="dlg close col-3"></td> <td class="dlg pctClose col-4"></td> <td class="dlg signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">CHỨNG KHOÁN</td><td></td>
+                        <!-- BĐS--> <td id="l14" class="l14 symbol col-1">L14</td> <td class="l14 vol col-2"></td> <td class="l14 close col-3"></td> <td class="l14 pctClose col-4"></td> <td class="l14 signal col-5"></td> <td></td>
+                        <!-- CAO SU--> <td id="dpr" class="dpr symbol col-1">DPR</td> <td class="dpr vol col-2"></td> <td class="dpr close col-3"></td> <td class="dpr pctClose col-4"></td> <td class="dpr signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="hhv" class="hhv symbol col-1">HHV</td> <td class="hhv vol col-2"></td> <td class="hhv close col-3"></td> <td class="hhv pctClose col-4"></td> <td class="hhv signal col-5"></td> <td></td>
+                        <!-- KHÁCH SẠN & DU LỊCH --> <td id="och" class="och symbol col-1">OCH</td> <td class="och vol col-2"></td> <td class="och close col-3"></td> <td class="och pctClose col-4"></td> <td class="och signal col-5"></td> <td></td>
+                        <!-- THUỶ SẢN --> <td id="aam" class="aam symbol col-1">AAM</td> <td class="aam vol col-2"></td> <td class="aam close col-3"></td> <td class="aam pctClose col-4"></td> <td class="aam signal col-5"></td> <td></td>
+                        <!-- THIẾT BỊ ĐIỆN --> <td id="gex" class="gex symbol col-1">GEX</td> <td class="gex vol col-2"></td> <td class="gex close col-3"></td> <td class="gex pctClose col-4"></td> <td class="gex signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="evs" class="evs symbol col-1">EVS</td> <td class="evs vol col-2"></td> <td class="evs close col-3"></td> <td class="evs pctClose col-4"></td> <td class="evs signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="hut" class="hut symbol col-1">HUT</td> <td class="hut vol col-2"></td> <td class="hut close col-3"></td> <td class="hut pctClose col-4"></td> <td class="hut signal col-5"></td> <td></td>
+                        <!-- CAO SU--> <td id="drc" class="drc symbol col-1">DRC</td> <td class="drc vol col-2"></td> <td class="drc close col-3"></td> <td class="drc pctClose col-4"></td> <td class="drc signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="lig" class="lig symbol col-1">LIG</td> <td class="lig vol col-2"></td> <td class="lig close col-3"></td> <td class="lig pctClose col-4"></td> <td class="lig signal col-5"></td> <td></td>
+                        <!-- KHÁCH SẠN & DU LỊCH --> <td id="dah" class="dah symbol col-1">DAH</td> <td class="dah vol col-2"></td> <td class="dah close col-3"></td> <td class="dah pctClose col-4"></td> <td class="dah signal col-5"></td> <td></td>
+                        <!-- THUỶ SẢN --> <td id="vhc" class="vhc symbol col-1">VHC</td> <td class="vhc vol col-2"></td> <td class="vhc close col-3"></td> <td class="vhc pctClose col-4"></td> <td class="vhc signal col-5"></td> <td></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="aas" class="aas symbol col-1">AAS</td> <td class="aas vol col-2"></td> <td class="aas close col-3"></td> <td class="aas pctClose col-4"></td> <td class="aas signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="vhm" class="vhm symbol col-1">VHM</td> <td class="vhm vol col-2"></td> <td class="vhm close col-3"></td> <td class="vhm pctClose col-4"></td> <td class="vhm signal col-5"></td> <td></td>
+                        <!-- CAO SU--> <td id="gvr" class="gvr symbol col-1">GVR</td> <td class="gvr vol col-2"></td> <td class="gvr close col-3"></td> <td class="gvr pctClose col-4"></td> <td class="gvr signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="dtd" class="dtd symbol col-1">DTD</td> <td class="dtd vol col-2"></td> <td class="dtd close col-3"></td> <td class="dtd pctClose col-4"></td> <td class="dtd signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">DỆT MAY & SỢI</td> <td></td>
+                        <!-- THUỶ SẢN --> <td id="anv" class="anv symbol col-1">ANV</td> <td class="anv vol col-2"></td> <td class="anv close col-3"></td> <td class="anv pctClose col-4"></td> <td class="anv signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">ĐIỆN, NƯỚC, DỊCH VỤ CÔNG</td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="wss" class="wss symbol col-1">WSS</td> <td class="wss vol col-2"></td> <td class="wss close col-3"></td> <td class="wss pctClose col-4"></td> <td class="wss signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="dig" class="dig symbol col-1">DIG</td> <td class="dig vol col-2"></td> <td class="dig close col-3"></td> <td class="dig pctClose col-4"></td> <td class="dig signal col-5"></td> <td></td>
+                        <!-- CAO SU--> <td id="phr" class="phr symbol col-1">PHR</td> <td class="phr vol col-2"></td> <td class="phr close col-3"></td> <td class="phr pctClose col-4"></td> <td class="phr signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="bcg" class="bcg symbol col-1">BCG</td> <td class="bcg vol col-2"></td> <td class="bcg close col-3"></td> <td class="bcg pctClose col-4"></td> <td class="bcg signal col-5"></td> <td></td>
+                        <!-- DỆT MAY & SỢI --> <td id="eve" class="eve symbol col-1">EVE</td> <td class="eve vol col-2"></td> <td class="eve close col-3"></td> <td class="eve pctClose col-4"></td> <td class="eve signal col-5"></td> <td></td>
+                        <!-- THUỶ SẢN --> <td id="mpc" class="mpc symbol col-1">MPC</td> <td class="mpc vol col-2"></td> <td class="mpc close col-3"></td> <td class="mpc pctClose col-4"></td> <td class="mpc signal col-5"></td> <td></td>
+                        <!-- ĐIỆN, NƯỚC, DỊCH VỤ CÔNG --> <td id="geg" class="geg symbol col-1">GEG</td> <td class="geg vol col-2"></td> <td class="geg close col-3"></td> <td class="geg pctClose col-4"></td> <td class="geg signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="sbs" class="sbs symbol col-1">SBS</td> <td class="sbs vol col-2"></td> <td class="sbs close col-3"></td> <td class="sbs pctClose col-4"></td> <td class="sbs signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="scr" class="scr symbol col-1">SCR</td> <td class="scr vol col-2"></td> <td class="scr close col-3"></td> <td class="scr pctClose col-4"></td> <td class="scr signal col-5"></td> <td></td>
+                        <!-- CAO SU--> <td id="dri" class="dri symbol col-1">DRI</td> <td class="dri vol col-2"></td> <td class="dri close col-3"></td> <td class="dri pctClose col-4"></td> <td class="dri signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="mst" class="mst symbol col-1">MST</td> <td class="mst vol col-2"></td> <td class="mst close col-3"></td> <td class="mst pctClose col-4"></td> <td class="mst signal col-5"></td> <td></td>
+                        <!-- DỆT MAY & SỢI --> <td id="msh" class="msh symbol col-1">MSH</td> <td class="msh vol col-2"></td> <td class="msh close col-3"></td> <td class="msh pctClose col-4"></td> <td class="msh signal col-5"></td> <td></td>
+                        <!-- THUỶ SẢN --> <td id="cmx" class="cmx symbol col-1">CMX</td> <td class="cmx vol col-2"></td> <td class="cmx close col-3"></td> <td class="cmx pctClose col-4"></td> <td class="cmx signal col-5"></td> <td></td>
+                        <!-- ĐIỆN, NƯỚC, DỊCH VỤ CÔNG --> <td id="bwe" class="bwe symbol col-1">BWE</td> <td class="bwe vol col-2"></td> <td class="bwe close col-3"></td> <td class="bwe pctClose col-4"></td> <td class="bwe signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="vds" class="vds symbol col-1">VDS</td> <td class="vds vol col-2"></td> <td class="vds close col-3"></td> <td class="vds pctClose col-4"></td> <td class="vds signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="khg" class="khg symbol col-1">KHG</td> <td class="khg vol col-2"></td> <td class="khg close col-3"></td> <td class="khg pctClose col-4"></td> <td class="khg signal col-5"></td> <td></td>
+                        <!-- CAO SU--> <td id="vhg" class="vhg symbol col-1">VHG</td> <td class="vhg vol col-2"></td> <td class="vhg close col-3"></td> <td class="vhg pctClose col-4"></td> <td class="vhg signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="c69" class="c69 symbol col-1">C69</td> <td class="c69 vol col-2"></td> <td class="c69 close col-3"></td> <td class="c69 pctClose col-4"></td> <td class="c69 signal col-5"></td> <td></td>
+                        <!-- DỆT MAY & SỢI --> <td id="svd" class="svd symbol col-1">SVD</td> <td class="svd vol col-2"></td> <td class="svd close col-3"></td> <td class="svd pctClose col-4"></td> <td class="svd signal col-5"></td> <td></td>
+                        <!-- THUỶ SẢN --> <td id="acl" class="acl symbol col-1">ACL</td> <td class="acl vol col-2"></td> <td class="acl close col-3"></td> <td class="acl pctClose col-4"></td> <td class="acl signal col-5"></td> <td></td>
+                        <!-- ĐIỆN, NƯỚC, DỊCH VỤ CÔNG --> <td id="tta" class="tta symbol col-1">TTA</td> <td class="tta vol col-2"></td> <td class="tta close col-3"></td> <td class="tta pctClose col-4"></td> <td class="tta signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="tvb" class="tvb symbol col-1">TVB</td> <td class="tvb vol col-2"></td> <td class="tvb close col-3"></td> <td class="tvb pctClose col-4"></td> <td class="tvb signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="vpi" class="vpi symbol col-1">VPI</td> <td class="vpi vol col-2"></td> <td class="vpi close col-3"></td> <td class="vpi pctClose col-4"></td> <td class="vpi signal col-5"></td> <td></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="fcn" class="fcn symbol col-1">FCN</td> <td class="fcn vol col-2"></td> <td class="fcn close col-3"></td> <td class="fcn pctClose col-4"></td> <td class="fcn signal col-5"></td> <td></td>
+                        <!-- DỆT MAY & SỢI --> <td id="tdt" class="tdt symbol col-1">TDT</td> <td class="tdt vol col-2"></td> <td class="tdt close col-3"></td> <td class="tdt pctClose col-4"></td> <td class="tdt signal col-5"></td> <td></td>
+                        <!-- THUỶ SẢN --> <td id="idi" class="idi symbol col-1">IDI</td> <td class="idi vol col-2"></td> <td class="idi close col-3"></td> <td class="idi pctClose col-4"></td> <td class="idi signal col-5"></td> <td></td>
+                        <!-- ĐIỆN, NƯỚC, DỊCH VỤ CÔNG --> <td id="khp" class="khp symbol col-1">KHP</td> <td class="khp vol col-2"></td> <td class="khp close col-3"></td> <td class="khp pctClose col-4"></td> <td class="khp signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="hbs" class="hbs symbol col-1">HBS</td> <td class="hbs vol col-2"></td> <td class="hbs close col-3"></td> <td class="hbs pctClose col-4"></td> <td class="hbs signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="dxg" class="dxg symbol col-1">DXG</td> <td class="dxg vol col-2"></td> <td class="dxg close col-3"></td> <td class="dxg pctClose col-4"></td> <td class="dxg signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">THÉP & NHÔM</td><td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="htn" class="htn symbol col-1">HTN</td> <td class="htn vol col-2"></td> <td class="htn close col-3"></td> <td class="htn pctClose col-4"></td> <td class="htn signal col-5"></td> <td></td>
+                        <!-- DỆT MAY & SỢI --> <td id="tcm" class="tcm symbol col-1">TCM</td> <td class="tcm vol col-2"></td> <td class="tcm close col-3"></td> <td class="tcm pctClose col-4"></td> <td class="tcm signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">MÍA ĐƯỜNG</td> <td></td>
+                        <!-- ĐIỆN, NƯỚC, DỊCH VỤ CÔNG --> <td id="tdm" class="tdm symbol col-1">TDM</td> <td class="tdm vol col-2"></td> <td class="tdm close col-3"></td> <td class="tdm pctClose col-4"></td> <td class="tdm signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="bsi" class="bsi symbol col-1">BSI</td> <td class="bsi vol col-2"></td> <td class="bsi close col-3"></td> <td class="bsi pctClose col-4"></td> <td class="bsi signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="dxs" class="dxs symbol col-1">DXS</td> <td class="dxs vol col-2"></td> <td class="dxs close col-3"></td> <td class="dxs pctClose col-4"></td> <td class="dxs signal col-5"></td> <td></td>
+                        <!-- THÉP & NHÔM--> <td id="shi" class="shi symbol col-1">SHI</td> <td class="shi vol col-2"></td> <td class="shi close col-3"></td> <td class="shi pctClose col-4"></td> <td class="shi signal col-5"></td> <td></td>
+                        <!-- XÂY DỰNG & ĐẦU TƯ CÔNG --> <td id="vcg" class="vcg symbol col-1">VCG</td> <td class="vcg vol col-2"></td> <td class="vcg close col-3"></td> <td class="vcg pctClose col-4"></td> <td class="vcg signal col-5"></td> <td></td>
+                        <!-- DỆT MAY & SỢI --> <td id="gil" class="gil symbol col-1">GIL</td> <td class="gil vol col-2"></td> <td class="gil close col-3"></td> <td class="gil pctClose col-4"></td> <td class="gil signal col-5"></td> <td></td>
+                        <!-- MÍA ĐƯỜNG --> <td id="bbc" class="bbc symbol col-1">BBC</td> <td class="bbc vol col-2"></td> <td class="bbc close col-3"></td> <td class="bbc pctClose col-4"></td> <td class="bbc signal col-5"></td> <td></td>
+                        <!-- ĐIỆN, NƯỚC, DỊCH VỤ CÔNG --> <td id="idc" class="idc symbol col-1">IDC</td> <td class="idc vol col-2"></td> <td class="idc close col-3"></td> <td class="idc pctClose col-4"></td> <td class="idc signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="agr" class="agr symbol col-1">AGR</td> <td class="agr vol col-2"></td> <td class="agr close col-3"></td> <td class="agr pctClose col-4"></td> <td class="agr signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="tdc" class="tdc symbol col-1">TDC</td> <td class="tdc vol col-2"></td> <td class="tdc close col-3"></td> <td class="tdc pctClose col-4"></td> <td class="tdc signal col-5"></td> <td></td>
+                        <!-- THÉP & NHÔM--> <td id="tvn" class="tvn symbol col-1">TVN</td> <td class="tvn vol col-2"></td> <td class="tvn close col-3"></td> <td class="tvn pctClose col-4"></td> <td class="tvn signal col-5"></td> <td></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                        <!-- DỆT MAY & SỢI --> <td id="kmr" class="kmr symbol col-1">KMR</td> <td class="kmr vol col-2"></td> <td class="kmr close col-3"></td> <td class="kmr pctClose col-4"></td> <td class="kmr signal col-5"></td> <td></td>
+                        <!-- MÍA ĐƯỜNG --> <td id="cbs" class="cbs symbol col-1">CBS</td> <td class="cbs vol col-2"></td> <td class="cbs close col-3"></td> <td class="cbs pctClose col-4"></td> <td class="cbs signal col-5"></td> <td></td>
+                        <!-- ĐIỆN, NƯỚC, DỊCH VỤ CÔNG --> <td id="nt2" class="nt2 symbol col-1">NT2</td> <td class="nt2 vol col-2"></td> <td class="nt2 close col-3"></td> <td class="nt2 pctClose col-4"></td> <td class="nt2 signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="tvs" class="tvs symbol col-1">TVS</td> <td class="tvs vol col-2"></td> <td class="tvs close col-3"></td> <td class="tvs pctClose col-4"></td> <td class="tvs signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="sjs" class="sjs symbol col-1">SJS</td> <td class="sjs vol col-2"></td> <td class="sjs close col-3"></td> <td class="sjs pctClose col-4"></td> <td class="sjs signal col-5"></td> <td></td>
+                        <!-- THÉP & NHÔM--> <td id="tlh" class="tlh symbol col-1">TLH</td> <td class="tlh vol col-2"></td> <td class="tlh close col-3"></td> <td class="tlh pctClose col-4"></td> <td class="tlh signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">NHỰA</td><td></td>
+                        <!-- DỆT MAY & SỢI --> <td id="tng" class="tng symbol col-1">TNG</td> <td class="tng vol col-2"></td> <td class="tng close col-3"></td> <td class="tng pctClose col-4"></td> <td class="tng signal col-5"></td> <td></td>
+                        <!-- MÍA ĐƯỜNG --> <td id="sbt" class="sbt symbol col-1">SBT</td> <td class="sbt vol col-2"></td> <td class="sbt close col-3"></td> <td class="sbt pctClose col-4"></td> <td class="sbt signal col-5"></td> <td></td>
+                        <!-- ĐIỆN, NƯỚC, DỊCH VỤ CÔNG --> <td id="sjd" class="sjd symbol col-1">SJD</td> <td class="sjd vol col-2"></td> <td class="sjd close col-3"></td> <td class="sjd pctClose col-4"></td> <td class="sjd signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="bvs" class="bvs symbol col-1">BVS</td> <td class="bvs vol col-2"></td> <td class="bvs close col-3"></td> <td class="bvs pctClose col-4"></td> <td class="bvs signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="tch" class="tch symbol col-1">TCH</td> <td class="tch vol col-2"></td> <td class="tch close col-3"></td> <td class="tch pctClose col-4"></td> <td class="tch signal col-5"></td> <td></td>
+                        <!-- THÉP & NHÔM--> <td id="pom" class="pom symbol col-1">POM</td> <td class="pom vol col-2"></td> <td class="pom close col-3"></td> <td class="pom pctClose col-4"></td> <td class="pom signal col-5"></td> <td></td>
+                        <!-- NHỰA --> <td id="ntp" class="ntp symbol col-1">NTP</td> <td class="ntp vol col-2"></td> <td class="ntp close col-3"></td> <td class="ntp pctClose col-4"></td> <td class="ntp signal col-5"></td> <td></td>
+                        <!-- DỆT MAY & SỢI --> <td id="ftm" class="ftm symbol col-1">FTM</td> <td class="ftm vol col-2"></td> <td class="ftm close col-3"></td> <td class="ftm pctClose col-4"></td> <td class="ftm signal col-5"></td> <td></td>
+                        <!-- MÍA ĐƯỜNG --> <td id="lss" class="lss symbol col-1">LSS</td> <td class="lss vol col-2"></td> <td class="lss close col-3"></td> <td class="lss pctClose col-4"></td> <td class="lss signal col-5"></td> <td></td>
+                        <!-- ĐIỆN, NƯỚC, DỊCH VỤ CÔNG --> <td id="hid" class="hid symbol col-1">HID</td> <td class="hid vol col-2"></td> <td class="hid close col-3"></td> <td class="hid pctClose col-4"></td> <td class="hid signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="cts" class="cts symbol col-1">CTS</td> <td class="cts vol col-2"></td> <td class="cts close col-3"></td> <td class="cts pctClose col-4"></td> <td class="cts signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="nrc" class="nrc symbol col-1">NRC</td> <td class="nrc vol col-2"></td> <td class="nrc close col-3"></td> <td class="nrc pctClose col-4"></td> <td class="nrc signal col-5"></td> <td></td>
+                        <!-- THÉP & NHÔM--> <td id="nsh" class="nsh symbol col-1">NSH</td> <td class="nsh vol col-2"></td> <td class="nsh close col-3"></td> <td class="nsh pctClose col-4"></td> <td class="nsh signal col-5"></td> <td></td>
+                        <!-- NHỰA --> <td id="hcd" class="hcd symbol col-1">HCD</td> <td class="hcd vol col-2"></td> <td class="hcd close col-3"></td> <td class="hcd pctClose col-4"></td> <td class="hcd signal col-5"></td> <td></td>
+                        <!-- DỆT MAY & SỢI --> <td id="vgt" class="vgt symbol col-1">VGT</td> <td class="vgt vol col-2"></td> <td class="vgt close col-3"></td> <td class="vgt pctClose col-4"></td> <td class="vgt signal col-5"></td> <td></td>
+                        <!-- MÍA ĐƯỜNG --> <td id="qns" class="qns symbol col-1">QNS</td> <td class="qns vol col-2"></td> <td class="qns close col-3"></td> <td class="qns pctClose col-4"></td> <td class="qns signal col-5"></td> <td></td>
+                        <!-- ĐIỆN, NƯỚC, DỊCH VỤ CÔNG --> <td id="ppc" class="ppc symbol col-1">PPC</td> <td class="ppc vol col-2"></td> <td class="ppc close col-3"></td> <td class="ppc pctClose col-4"></td> <td class="ppc signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="ors" class="ors symbol col-1">ORS</td> <td class="ors vol col-2"></td> <td class="ors close col-3"></td> <td class="ors pctClose col-4"></td> <td class="ors signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="vre" class="vre symbol col-1">VRE</td> <td class="vre vol col-2"></td> <td class="vre close col-3"></td> <td class="vre pctClose col-4"></td> <td class="vre signal col-5"></td> <td></td>
+                        <!-- THÉP & NHÔM--> <td id="hsg" class="hsg symbol col-1">HSG</td> <td class="hsg vol col-2"></td> <td class="hsg close col-3"></td> <td class="hsg pctClose col-4"></td> <td class="hsg signal col-5"></td> <td></td>
+                        <!-- NHỰA --> <td id="aaa" class="aaa symbol col-1">AAA</td> <td class="aaa vol col-2"></td> <td class="aaa close col-3"></td> <td class="aaa pctClose col-4"></td> <td class="aaa signal col-5"></td> <td></td>
+                        <!-- DỆT MAY & SỢI --> <td id="ads" class="ads symbol col-1">ADS</td> <td class="ads vol col-2"></td> <td class="ads close col-3"></td> <td class="ads pctClose col-4"></td> <td class="ads signal col-5"></td> <td></td>
+                        <!-- MÍA ĐƯỜNG --> <td id="sls" class="sls symbol col-1">SLS</td> <td class="sls vol col-2"></td> <td class="sls close col-3"></td> <td class="sls pctClose col-4"></td> <td class="sls signal col-5"></td> <td></td>
+                        <!-- ĐIỆN, NƯỚC, DỊCH VỤ CÔNG --> <td id="pow" class="pow symbol col-1">POW</td> <td class="pow vol col-2"></td> <td class="pow close col-3"></td> <td class="pow pctClose col-4"></td> <td class="pow signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="vci" class="vci symbol col-1">VCI</td> <td class="vci vol col-2"></td> <td class="vci close col-3"></td> <td class="vci pctClose col-4"></td> <td class="vci signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="evg" class="evg symbol col-1">EVG</td> <td class="evg vol col-2"></td> <td class="evg close col-3"></td> <td class="evg pctClose col-4"></td> <td class="evg signal col-5"></td> <td></td>
+                        <!-- THÉP & NHÔM--> <td id="vgs" class="vgs symbol col-1">VGS</td> <td class="vgs vol col-2"></td> <td class="vgs close col-3"></td> <td class="vgs pctClose col-4"></td> <td class="vgs signal col-5"></td> <td></td>
+                        <!-- NHỰA --> <td id="plp" class="plp symbol col-1">PLP</td> <td class="plp vol col-2"></td> <td class="plp close col-3"></td> <td class="plp pctClose col-4"></td> <td class="plp signal col-5"></td> <td></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="hcm" class="hcm symbol col-1">HCM</td> <td class="hcm vol col-2"></td> <td class="hcm close col-3"></td> <td class="hcm pctClose col-4"></td> <td class="hcm signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="fir" class="fir symbol col-1">FIR</td> <td class="fir vol col-2"></td> <td class="fir close col-3"></td> <td class="fir pctClose col-4"></td> <td class="fir signal col-5"></td> <td></td>
+                        <!-- THÉP & NHÔM--> <td id="nkg" class="nkg symbol col-1">NKG</td> <td class="nkg vol col-2"></td> <td class="nkg close col-3"></td> <td class="nkg pctClose col-4"></td> <td class="nkg signal col-5"></td> <td></td>
+                        <!-- NHỰA --> <td id="hii" class="hii symbol col-1">HII</td> <td class="hii vol col-2"></td> <td class="hii close col-3"></td> <td class="hii pctClose col-4"></td> <td class="hii signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">BẢO HIỂM</td><td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">BĐS KHU CÔNG NGHIỆP</td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">THAN & KHAI KHOÁNG</td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="mbs" class="mbs symbol col-1">MBS</td> <td class="mbs vol col-2"></td> <td class="mbs close col-3"></td> <td class="mbs pctClose col-4"></td> <td class="mbs signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="hdg" class="hdg symbol col-1">HDG</td> <td class="hdg vol col-2"></td> <td class="hdg close col-3"></td> <td class="hdg pctClose col-4"></td> <td class="hdg signal col-5"></td> <td></td>
+                        <!-- THÉP & NHÔM--> <td id="kvc" class="kvc symbol col-1">KVC</td> <td class="kvc vol col-2"></td> <td class="kvc close col-3"></td> <td class="kvc pctClose col-4"></td> <td class="kvc signal col-5"></td> <td></td>
+                        <!-- NHỰA --> <td id="dag" class="dag symbol col-1">DAG</td> <td class="dag vol col-2"></td> <td class="dag close col-3"></td> <td class="dag pctClose col-4"></td> <td class="dag signal col-5"></td> <td></td>
+                        <!-- BẢO HIỂM --> <td id="pvi" class="pvi symbol col-1">PVI</td> <td class="pvi vol col-2"></td> <td class="pvi close col-3"></td> <td class="pvi pctClose col-4"></td> <td class="pvi signal col-5"></td> <td></td>
+                        <!-- BĐS KHU CÔNG NGHIỆP --> <td id="ccl" class="ccl symbol col-1">CCL</td> <td class="ccl vol col-2"></td> <td class="ccl close col-3"></td> <td class="ccl pctClose col-4"></td> <td class="ccl signal col-5"></td> <td></td>
+                        <!-- THAN & KHAI KHOÁNG --> <td id="lcm" class="lcm symbol col-1">LCM</td> <td class="lcm vol col-2"></td> <td class="lcm close col-3"></td> <td class="lcm pctClose col-4"></td> <td class="lcm signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="ivs" class="ivs symbol col-1">IVS</td> <td class="ivs vol col-2"></td> <td class="ivs close col-3"></td> <td class="ivs pctClose col-4"></td> <td class="ivs signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="ksf" class="ksf symbol col-1">KSF</td> <td class="ksf vol col-2"></td> <td class="ksf close col-3"></td> <td class="ksf pctClose col-4"></td> <td class="ksf signal col-5"></td> <td></td>
+                        <!-- THÉP & NHÔM--> <td id="hpg" class="hpg symbol col-1">HPG</td> <td class="hpg vol col-2"></td> <td class="hpg close col-3"></td> <td class="hpg pctClose col-4"></td> <td class="hpg signal col-5"></td> <td></td>
+                        <!-- NHỰA --> <td id="nhh" class="nhh symbol col-1">NHH</td> <td class="nhh vol col-2"></td> <td class="nhh close col-3"></td> <td class="nhh pctClose col-4"></td> <td class="nhh signal col-5"></td> <td></td>
+                        <!-- BẢO HIỂM --> <td id="mig" class="mig symbol col-1">MIG</td> <td class="mig vol col-2"></td> <td class="mig close col-3"></td> <td class="mig pctClose col-4"></td> <td class="mig signal col-5"></td> <td></td>
+                        <!-- BĐS KHU CÔNG NGHIỆP --> <td id="dta" class="dta symbol col-1">DTA</td> <td class="dta vol col-2"></td> <td class="dta close col-3"></td> <td class="dta pctClose col-4"></td> <td class="dta signal col-5"></td> <td></td>
+                        <!-- THAN & KHAI KHOÁNG --> <td id="bmc" class="bmc symbol col-1">BMC</td> <td class="bmc vol col-2"></td> <td class="bmc close col-3"></td> <td class="bmc pctClose col-4"></td> <td class="bmc signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="apg" class="apg symbol col-1">APG</td> <td class="apg vol col-2"></td> <td class="apg close col-3"></td> <td class="apg pctClose col-4"></td> <td class="apg signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="hpx" class="hpx symbol col-1">HPX</td> <td class="hpx vol col-2"></td> <td class="hpx close col-3"></td> <td class="hpx pctClose col-4"></td> <td class="hpx signal col-5"></td> <td></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                        <!-- NHỰA --> <td id="bmp" class="bmp symbol col-1">BMP</td> <td class="bmp vol col-2"></td> <td class="bmp close col-3"></td> <td class="bmp pctClose col-4"></td> <td class="bmp signal col-5"></td> <td></td>
+                        <!-- BẢO HIỂM --> <td id="bmi" class="bmi symbol col-1">BMI</td> <td class="bmi vol col-2"></td> <td class="bmi close col-3"></td> <td class="bmi pctClose col-4"></td> <td class="bmi signal col-5"></td> <td></td>
+                        <!-- BĐS KHU CÔNG NGHIỆP --> <td id="bcm" class="bcm symbol col-1">BCM</td> <td class="bcm vol col-2"></td> <td class="bcm close col-3"></td> <td class="bcm pctClose col-4"></td> <td class="bcm signal col-5"></td> <td></td>
+                        <!-- THAN & KHAI KHOÁNG --> <td id="ksq" class="ksq symbol col-1">KSQ</td> <td class="ksq vol col-2"></td> <td class="ksq close col-3"></td> <td class="ksq pctClose col-4"></td> <td class="ksq signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="vig" class="vig symbol col-1">VIG</td> <td class="vig vol col-2"></td> <td class="vig close col-3"></td> <td class="vig pctClose col-4"></td> <td class="vig signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="vrc" class="vrc symbol col-1">VRC</td> <td class="vrc vol col-2"></td> <td class="vrc close col-3"></td> <td class="vrc pctClose col-4"></td> <td class="vrc signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">XI MĂNG & BÊ TÔNG</td><td></td>
+                        <!-- NHỰA --> <td id="aph" class="aph symbol col-1">APH</td> <td class="aph vol col-2"></td> <td class="aph close col-3"></td> <td class="aph pctClose col-4"></td> <td class="aph signal col-5"></td> <td></td>
+                        <!-- BẢO HIỂM --> <td id="bvh" class="bvh symbol col-1">BVH</td> <td class="bvh vol col-2"></td> <td class="bvh close col-3"></td> <td class="bvh pctClose col-4"></td> <td class="bvh signal col-5"></td> <td></td>
+                        <!-- BĐS KHU CÔNG NGHIỆP --> <td id="lhg" class="lhg symbol col-1">LHG</td> <td class="lhg vol col-2"></td> <td class="lhg close col-3"></td> <td class="lhg pctClose col-4"></td> <td class="lhg signal col-5"></td> <td></td>
+                        <!-- THAN & KHAI KHOÁNG --> <td id="tht" class="tht symbol col-1">THT</td> <td class="tht vol col-2"></td> <td class="tht close col-3"></td> <td class="tht pctClose col-4"></td> <td class="tht signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="aps" class="aps symbol col-1">APS</td> <td class="aps vol col-2"></td> <td class="aps close col-3"></td> <td class="aps pctClose col-4"></td> <td class="aps signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="ptl" class="ptl symbol col-1">PTL</td> <td class="ptl vol col-2"></td> <td class="ptl close col-3"></td> <td class="ptl pctClose col-4"></td> <td class="ptl signal col-5"></td> <td></td>
+                        <!-- XI MĂNG & BÊ TÔNG --> <td id="hom" class="hom symbol col-1">HOM</td> <td class="hom vol col-2"></td> <td class="hom close col-3"></td> <td class="hom pctClose col-4"></td> <td class="hom signal col-5"></td> <td></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                        <!-- BĐS KHU CÔNG NGHIỆP --> <td id="ntl" class="ntl symbol col-1">NTL</td> <td class="ntl vol col-2"></td> <td class="ntl close col-3"></td> <td class="ntl pctClose col-4"></td> <td class="ntl signal col-5"></td> <td></td>
+                        <!-- THAN & KHAI KHOÁNG --> <td id="spi" class="spi symbol col-1">SPI</td> <td class="spi vol col-2"></td> <td class="spi close col-3"></td> <td class="spi pctClose col-4"></td> <td class="spi signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="vnd" class="vnd symbol col-1">VND</td> <td class="vnd vol col-2"></td> <td class="vnd close col-3"></td> <td class="vnd pctClose col-4"></td> <td class="vnd signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="pdr" class="pdr symbol col-1">PDR</td> <td class="pdr vol col-2"></td> <td class="pdr close col-3"></td> <td class="pdr pctClose col-4"></td> <td class="pdr signal col-5"></td> <td></td>
+                        <!-- XI MĂNG & BÊ TÔNG --> <td id="bts" class="bts symbol col-1">BTS</td> <td class="bts vol col-2"></td> <td class="bts close col-3"></td> <td class="bts pctClose col-4"></td> <td class="bts signal col-5"></td> <td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">BÁN LẺ & TIÊU DÙNG</td><td></td>
+                        <!-- TIÊU ĐỀ --><td colspan="5" class="group">GỖ, GIẤY, ĐỒ GIA DỤNG</td><td></td>
+                        <!-- BĐS KHU CÔNG NGHIỆP --> <td id="ijc" class="ijc symbol col-1">IJC</td> <td class="ijc vol col-2"></td> <td class="ijc close col-3"></td> <td class="ijc pctClose col-4"></td> <td class="ijc signal col-5"></td> <td></td>
+                        <!-- THAN & KHAI KHOÁNG --> <td id="tdn" class="tdn symbol col-1">TDN</td> <td class="tdn vol col-2"></td> <td class="tdn close col-3"></td> <td class="tdn pctClose col-4"></td> <td class="tdn signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="psi" class="psi symbol col-1">PSI</td> <td class="psi vol col-2"></td> <td class="psi close col-3"></td> <td class="psi pctClose col-4"></td> <td class="psi signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="vic" class="vic symbol col-1">VIC</td> <td class="vic vol col-2"></td> <td class="vic close col-3"></td> <td class="vic pctClose col-4"></td> <td class="vic signal col-5"></td> <td></td>
+                        <!-- XI MĂNG & BÊ TÔNG --> <td id="acc" class="acc symbol col-1">ACC</td> <td class="acc vol col-2"></td> <td class="acc close col-3"></td> <td class="acc pctClose col-4"></td> <td class="acc signal col-5"></td> <td></td>
+                        <!-- BÁN LẺ & TIÊU DÙNG--> <td id="pet" class="pet symbol col-1">PET</td> <td class="pet vol col-2"></td> <td class="pet close col-3"></td> <td class="pet pctClose col-4"></td> <td class="pet signal col-5"></td> <td></td>
+                        <!-- GỖ, GIẤY, ĐỒ GIA DỤNG --> <td id="mhl" class="mhl symbol col-1">MHL</td> <td class="mhl vol col-2"></td> <td class="mhl close col-3"></td> <td class="mhl pctClose col-4"></td> <td class="mhl signal col-5"></td> <td></td>
+                        <!-- BĐS KHU CÔNG NGHIỆP --> <td id="ldg" class="ldg symbol col-1">LDG</td> <td class="ldg vol col-2"></td> <td class="ldg close col-3"></td> <td class="ldg pctClose col-4"></td> <td class="ldg signal col-5"></td> <td></td>
+                        <!-- THAN & KHAI KHOÁNG --> <td id="tc6" class="tc6 symbol col-1">TC6</td> <td class="tc6 vol col-2"></td> <td class="tc6 close col-3"></td> <td class="tc6 pctClose col-4"></td> <td class="tc6 signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="shs" class="shs symbol col-1">SHS</td> <td class="shs vol col-2"></td> <td class="shs close col-3"></td> <td class="shs pctClose col-4"></td> <td class="shs signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="nvl" class="nvl symbol col-1">NVL</td> <td class="nvl vol col-2"></td> <td class="nvl close col-3"></td> <td class="nvl pctClose col-4"></td> <td class="nvl signal col-5"></td> <td></td>
+                        <!-- XI MĂNG & BÊ TÔNG --> <td id="ht1" class="ht1 symbol col-1">HT1</td> <td class="ht1 vol col-2"></td> <td class="ht1 close col-3"></td> <td class="ht1 pctClose col-4"></td> <td class="ht1 signal col-5"></td> <td></td>
+                        <!-- BÁN LẺ & TIÊU DÙNG--> <td id="msr" class="msr symbol col-1">MSR</td> <td class="msr vol col-2"></td> <td class="msr close col-3"></td> <td class="msr pctClose col-4"></td> <td class="msr signal col-5"></td> <td></td>
+                        <!-- GỖ, GIẤY, ĐỒ GIA DỤNG --> <td id="hap" class="hap symbol col-1">HAP</td> <td class="hap vol col-2"></td> <td class="hap close col-3"></td> <td class="hap pctClose col-4"></td> <td class="hap signal col-5"></td> <td></td>
+                        <!-- BĐS KHU CÔNG NGHIỆP --> <td id="kbc" class="kbc symbol col-1">KBC</td> <td class="kbc vol col-2"></td> <td class="kbc close col-3"></td> <td class="kbc pctClose col-4"></td> <td class="kbc signal col-5"></td> <td></td>
+                        <!-- THAN & KHAI KHOÁNG --> <td id="ksb" class="ksb symbol col-1">KSB</td> <td class="ksb vol col-2"></td> <td class="ksb close col-3"></td> <td class="ksb pctClose col-4"></td> <td class="ksb signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="ssi" class="ssi symbol col-1">SSI</td> <td class="ssi vol col-2"></td> <td class="ssi close col-3"></td> <td class="ssi pctClose col-4"></td> <td class="ssi signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="qcg" class="qcg symbol col-1">QCG</td> <td class="qcg vol col-2"></td> <td class="qcg close col-3"></td> <td class="qcg pctClose col-4"></td> <td class="qcg signal col-5"></td> <td></td>
+                        <!-- XI MĂNG & BÊ TÔNG --> <td id="bcc" class="bcc symbol col-1">BCC</td> <td class="bcc vol col-2"></td> <td class="bcc close col-3"></td> <td class="bcc pctClose col-4"></td> <td class="bcc signal col-5"></td> <td></td>
+                        <!-- BÁN LẺ & TIÊU DÙNG--> <td id="pnj" class="pnj symbol col-1">PNJ</td> <td class="pnj vol col-2"></td> <td class="pnj close col-3"></td> <td class="pnj pctClose col-4"></td> <td class="pnj signal col-5"></td> <td></td>
+                        <!-- GỖ, GIẤY, ĐỒ GIA DỤNG --> <td id="bkg" class="bkg symbol col-1">BKG</td> <td class="bkg vol col-2"></td> <td class="bkg close col-3"></td> <td class="bkg pctClose col-4"></td> <td class="bkg signal col-5"></td> <td></td>
+                        <!-- BĐS KHU CÔNG NGHIỆP --> <td id="nlg" class="nlg symbol col-1">NLG</td> <td class="nlg vol col-2"></td> <td class="nlg close col-3"></td> <td class="nlg pctClose col-4"></td> <td class="nlg signal col-5"></td> <td></td>
+                        <!-- THAN & KHAI KHOÁNG --> <td id="c32" class="c32 symbol col-1">C32</td> <td class="c32 vol col-2"></td> <td class="c32 close col-3"></td> <td class="c32 pctClose col-4"></td> <td class="c32 signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="vix" class="vix symbol col-1">VIX</td> <td class="vix vol col-2"></td> <td class="vix close col-3"></td> <td class="vix pctClose col-4"></td> <td class="vix signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="bii" class="bii symbol col-1">BII</td> <td class="bii vol col-2"></td> <td class="bii close col-3"></td> <td class="bii pctClose col-4"></td> <td class="bii signal col-5"></td> <td></td>
+                        <!-- XI MĂNG & BÊ TÔNG --> <td id="fcm" class="fcm symbol col-1">FCM</td> <td class="fcm vol col-2"></td> <td class="fcm close col-3"></td> <td class="fcm pctClose col-4"></td> <td class="fcm signal col-5"></td> <td></td>
+                        <!-- BÁN LẺ & TIÊU DÙNG--> <td id="mwg" class="mwg symbol col-1">MWG</td> <td class="mwg vol col-2"></td> <td class="mwg close col-3"></td> <td class="mwg pctClose col-4"></td> <td class="mwg signal col-5"></td> <td></td>
+                        <!-- GỖ, GIẤY, ĐỒ GIA DỤNG --> <td id="sav" class="sav symbol col-1">SAV</td> <td class="sav vol col-2"></td> <td class="sav close col-3"></td> <td class="sav pctClose col-4"></td> <td class="sav signal col-5"></td> <td></td>
+                        <!-- BĐS KHU CÔNG NGHIỆP --> <td id="ita" class="ita symbol col-1">ITA</td> <td class="ita vol col-2"></td> <td class="ita close col-3"></td> <td class="ita pctClose col-4"></td> <td class="ita signal col-5"></td> <td></td>
+                        <!-- THAN & KHAI KHOÁNG --> <td id="tvd" class="tvd symbol col-1">TVD</td> <td class="tvd vol col-2"></td> <td class="tvd close col-3"></td> <td class="tvd pctClose col-4"></td> <td class="tvd signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td id="fts" class="fts symbol col-1">FTS</td> <td class="fts vol col-2"></td> <td class="fts close col-3"></td> <td class="fts pctClose col-4"></td> <td class="fts signal col-5"></td> <td></td>
+                        <!-- BĐS--> <td id="cig" class="cig symbol col-1">CIG</td> <td class="cig vol col-2"></td> <td class="cig close col-3"></td> <td class="cig pctClose col-4"></td> <td class="cig signal col-5"></td> <td></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                        <!-- BÁN LẺ & TIÊU DÙNG--> <td id="dgw" class="dgw symbol col-1">DGW</td> <td class="dgw vol col-2"></td> <td class="dgw close col-3"></td> <td class="dgw pctClose col-4"></td> <td class="dgw signal col-5"></td> <td></td>
+                        <!-- GỖ, GIẤY, ĐỒ GIA DỤNG --> <td id="ttf" class="ttf symbol col-1">TTF</td> <td class="ttf vol col-2"></td> <td class="ttf close col-3"></td> <td class="ttf pctClose col-4"></td> <td class="ttf signal col-5"></td> <td></td>
+                        <!-- BĐS KHU CÔNG NGHIỆP --> <td id="szc" class="szc symbol col-1">SZC</td> <td class="szc vol col-2"></td> <td class="szc close col-3"></td> <td class="szc pctClose col-4"></td> <td class="szc signal col-5"></td> <td></td>
+                        <!-- THAN & KHAI KHOÁNG --> <td id="dhm" class="dhm symbol col-1">DHM</td> <td class="dhm vol col-2"></td> <td class="dhm close col-3"></td> <td class="dhm pctClose col-4"></td> <td class="dhm signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- CHỨNG KHOÁN --> <td colspan="6"></td>
+                        <!-- BĐS--> <td id="tig" class="tig symbol col-1">TIG</td> <td class="tig vol col-2"></td> <td class="tig close col-3"></td> <td class="tig pctClose col-4"></td> <td class="tig signal col-5"></td> <td></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                        <!-- BÁN LẺ & TIÊU DÙNG--> <td id="frt" class="frt symbol col-1">FRT</td> <td class="frt vol col-2"></td> <td class="frt close col-3"></td> <td class="frt pctClose col-4"></td> <td class="frt signal col-5"></td> <td></td>
+                        <!-- GỖ, GIẤY, ĐỒ GIA DỤNG --> <td id="tld" class="tld symbol col-1">TLD</td> <td class="tld vol col-2"></td> <td class="tld close col-3"></td> <td class="tld pctClose col-4"></td> <td class="tld signal col-5"></td> <td></td>
+                        <!-- BĐS KHU CÔNG NGHIỆP --> <td id="cre" class="cre symbol col-1">CRE</td> <td class="cre vol col-2"></td> <td class="cre close col-3"></td> <td class="cre pctClose col-4"></td> <td class="cre signal col-5"></td> <td></td>
+                        <!-- THAN & KHAI KHOÁNG --> <td id="nbc" class="nbc symbol col-1">NBC</td> <td class="nbc vol col-2"></td> <td class="nbc close col-3"></td> <td class="nbc pctClose col-4"></td> <td class="nbc signal col-5"></td> <td></td>
+                    </tr>
+                    <tr>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                        <!-- TRẮNG --><td colspan="6"></td>
+                        <!-- BÁN LẺ & TIÊU DÙNG--> <td id="hax" class="hax symbol col-1">HAX</td> <td class="hax vol col-2"></td> <td class="hax close col-3"></td> <td class="hax pctClose col-4"></td> <td class="hax signal col-5"></td> <td></td>
+                        <!-- GỖ, GIẤY, ĐỒ GIA DỤNG --> <td id="hhp" class="hhp symbol col-1">HHP</td> <td class="hhp vol col-2"></td> <td class="hhp close col-3"></td> <td class="hhp pctClose col-4"></td> <td class="hhp signal col-5"></td> <td></td>
+                        <!-- BĐS KHU CÔNG NGHIỆP --> <td id="kos" class="kos symbol col-1">KOS</td> <td class="kos vol col-2"></td> <td class="kos close col-3"></td> <td class="kos pctClose col-4"></td> <td class="kos signal col-5"></td> <td></td>
+                        <!-- THAN & KHAI KHOÁNG --> <td id="tnt" class="tnt symbol col-1">TNT</td> <td class="tnt vol col-2"></td> <td class="tnt close col-3"></td> <td class="tnt pctClose col-4"></td> <td class="tnt signal col-5"></td> <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Scripts -->
+        <!-- <script src="plugins/jquery/jquery.min.js"></script> -->
+        <!-- <script src="plugins/bootstrap/bootstrap.min.js"></script> -->
+        <script src="scripts/index-old.js"></script>
+    </body>
+</html>

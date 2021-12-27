@@ -1,0 +1,79 @@
+html,body {
+  /*margin: 20px;*/
+  padding: 0;
+}
+
+body {
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 100%;
+  color: #333;
+  justify-content: center;
+}
+
+.table-container {
+  overflow: scroll;
+}
+
+table {
+  position: relative;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+}
+
+td, th {
+  white-space: nowrap;
+  border: 1px solid #ddd;
+  padding: 2px 5px 2px 5px;
+  text-align: center;
+}
+
+/*
+** Highlight hàng 1 và cột 1
+*/
+
+/*th {
+  background-color: #eee;
+  position: sticky;
+  top: -1px;
+  z-index: 2;
+  
+    
+  &:first-of-type {
+    left: 0;
+    z-index: 3;
+  }
+}*/
+
+/*tbody tr td:first-of-type {
+  background-color: #eee;
+  position: sticky;
+  left: -1px;
+  text-align: left;
+}*/
+
+/*
+** Đặt màu
+*/
+
+thead tr th.title {
+  background-color: yellow;
+}
+
+tbody tr td.group {
+  background-color: yellow;
+  font-weight: bold;
+  text-align: center;
+}
+
+tbody tr td.signal a.buy {
+  color: lime;
+}
+
+tbody tr td.signal a.sell {
+  color: red;
+}
+
+tbody tr td.signal a.strong {
+  font-weight: bold;
+}
