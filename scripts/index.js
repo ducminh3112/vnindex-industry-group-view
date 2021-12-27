@@ -131,7 +131,7 @@ window.onload = function() {
         var time = today.toLocaleTimeString('en-GB');
         $(`.time.value`).html(`${time}`);
         $(`.time.offset`).css('background', 'lime')
-        if ((time < "09:00:00")||(time > "15:00:00")){
+        if ((time < "09:00:00")){
             $(`.time.offset`).html(`Chưa mở`);
             $(`.time.offset`).css('background', 'red');
         } else if ((time >= "09:00:00")&&(time < "09:15:00")){
