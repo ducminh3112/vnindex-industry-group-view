@@ -254,8 +254,8 @@ window.onload = function() {
     // GET REQUEST: Thong tin co phieu
     //
 
-    // let date = today.toISOString("dd/MM/YYYY").slice(0, 10);
-    let date = "2020-12-31"
+    let date = today.toISOString("dd/MM/YYYY").slice(0, 10);
+    // let date = "2020-12-31"
     let strategy = Technical_Strategy.join(",");
     
     $.each(DuLieuCoPhieu, function(index, cophieu) {
