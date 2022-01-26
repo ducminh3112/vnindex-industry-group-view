@@ -68,6 +68,10 @@ tbody tr td.title {
   text-align: center;
 }
 
+tbody tr td.group {
+  text-align: center;
+}
+
 tbody tr td.signal a.buy {
   color: lime;
 }
